@@ -1,0 +1,125 @@
+.featured-cat {
+    max-width: 1220px;
+    margin: auto;
+    padding: 20px; // Add container padding
+
+    .heading-con {
+        margin: auto;
+
+        .subheading-con {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            .description {
+                h2 {
+                    text-align: center;
+                    font-weight: 800;
+                    font-size: 32px;
+                    line-height: 1.4;
+                    color: black;
+                }
+
+                text-align: center;
+                color: rgb(82, 82, 82);
+                width: calc(100% - 90px);
+                padding-bottom: 20px;
+            }
+
+            a {
+                width: 90px;
+                color: rgb(155, 155, 155);
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 5px;
+                padding-bottom: 20px;
+
+
+                svg {
+                    fill: rgb(155, 155, 155);
+                    stroke: rgb(155, 155, 155);
+                    height: 15px;
+                    width: 10px;
+                }
+            }
+        }
+
+    }
+
+}
+
+@media (max-width:1210px) {
+    .heading-con {
+        max-width: 982px;
+    }
+}
+
+@media (max-width:1011px) {
+    .heading-con {
+        max-width: 778px;
+    }
+}
+
+@media (max-width:813px) {
+    .featured-cat {
+        padding: 10px;
+
+        .heading-con {
+            max-width: 580px;
+
+            .subheading-con {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .description {
+                    h2 {
+                        font-size: 26px;
+                    }
+
+
+                    font-size: 14px;
+                    // word-spacing: 0.5;
+                    letter-spacing: -1px;
+
+                }
+            }
+        }
+    }
+}
+
+.featured-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 180px);
+    justify-content: center; // This centers the grid
+    gap: 18px;
+}
+
+.featured-card {
+    padding: 15px 18px;
+    width: 180px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 145px;
+    // Remove fixed width to let grid handle sizing
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0; // Remove individual margins - let grid gap handle spacing
+
+    img {
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+    }
+}
+
+.featured-card:hover {
+    color: #e7603f;
+}

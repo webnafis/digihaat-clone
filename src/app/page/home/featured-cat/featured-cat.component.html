@@ -1,0 +1,27 @@
+<div class="featured-cat">
+    <div class="heading-con">
+
+        <div class="subheading-con">
+            <div class="description">
+                <h2>
+                    Featured Category
+                </h2>
+                Get Your Desired Product from Featured Category!
+            </div>
+            <a href="" class="featured-link">
+                see all
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="featured-card-container">
+        <div *ngFor="let cat of categories; let i = index" class="featured-card">
+            <img [src]="cat.link" [alt]="cat.name">
+            <span>{{cat.name}}</span>
+        </div>
+    </div>
+</div>
