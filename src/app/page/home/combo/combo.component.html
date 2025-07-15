@@ -1,0 +1,48 @@
+<div class="section-three">
+    <div class="combo-con">
+        <div class="combo-heading">
+            <h3>
+                Combo Packages Offer
+            </h3>
+            <a href="" class="featured-link">
+                see all
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path
+                        d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                </svg>
+            </a>
+        </div>
+        <div class="combo-card-con">
+            <div *ngFor="let  item of cards; let i = index" class="combo-card">
+                <div class="flat">
+                    {{item.flatDiscount}} Tk off
+                </div>
+                <img [src]="item.link" [alt]="item.imageName">
+                <div class="card-body">
+                    <div class="card-body-left">
+                        <h3>{{item.imageName}}</h3>
+                        <span class="item">
+                            Total Items: {{item.items}} Items
+                        </span><br>
+                        <span class="money">
+                            ট {{item.price - item.flatDiscount}}
+                        </span>
+                        <del>
+                            ট {{item.price}}
+                        </del>
+                    </div>
+                    <div class="card-body-right">
+                        <button class="add-to-cart">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
+                            </svg> Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

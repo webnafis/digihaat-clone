@@ -1,0 +1,190 @@
+.section-three {
+    max-width: 1180px;
+    margin: auto;
+    padding: 20px;
+
+    .combo-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #b6b6b6;
+        margin-bottom: 20px;
+
+        h3 {
+            padding-bottom: 10px;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        .featured-link {
+            padding-bottom: 10px;
+            min-height: 100%;
+            width: 90px;
+            color: rgb(155, 155, 155);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 5px;
+
+            svg {
+                fill: rgb(155, 155, 155);
+                stroke: rgb(155, 155, 155);
+                height: 15px;
+                width: 10px;
+            }
+        }
+    }
+
+    .combo-card-con {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        .combo-card {
+            min-width: calc(33.33% - 6.66px);
+            // background-color: #FCD804;
+            position: relative;
+            background-color: #fff;
+            border: 2px solid #FCD804;
+            border-radius: 5px;
+
+            .flat {
+                background-color: red;
+                position: absolute;
+                top: 5px;
+                left: calc(100% - 100px);
+                color: #fff;
+                z-index: 100;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 5px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                cursor: pointer;
+
+            }
+
+            .card-body {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                padding-bottom: 20px;
+
+
+                .card-body-left {
+                    width: 50%;
+                    padding: 5px 10px;
+
+                    h3 {
+                        padding: 5px 0px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .item {
+                        padding: 5px 0px;
+                        font-size: 14px;
+                        letter-spacing: -1px;
+                        line-height: 1.9;
+                    }
+
+                    .money {
+                        font-weight: 700;
+                        font-size: 18px;
+                        color: #FCD804;
+                        // word-spacing: px;
+                        letter-spacing: -1px;
+                        padding: 5px 0px;
+                    }
+
+                    del {
+                        padding: 5px 0px;
+                        font-weight: 400;
+                    }
+                }
+
+                .card-body-right {
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+
+                    button {
+                        // display: flex;
+                        text-align: center;
+                        padding: 10px 14px;
+                        margin-top: 15px;
+                        margin-right: 10px;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+
+
+                        &:hover {
+                            background-color: #FCD804;
+                        }
+
+                        svg {
+                            width: 15px;
+                            height: 15px;
+                            margin-right: 5px;
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .section-three {
+        max-width: 942px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .section-three {
+        max-width: 700px;
+
+        .combo-card-con {
+            .combo-card:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:770px) {
+    .section-three {
+
+        max-width: 520px;
+        // max-width: 100;
+
+        .combo-heading {
+            flex-direction: column;
+        }
+
+        .combo-card-con {
+            .combo-card:nth-last-child(-n + 2) {
+                display: none;
+            }
+        }
+    }
+}

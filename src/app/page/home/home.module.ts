@@ -14,6 +14,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { TelevisionComponent } from './television/television.component';
 import { TrendingProductsComponent } from './trending-products/trending-products.component';
 import { HomeComponent } from './home.component';
+import { HeadingsComponent } from "./headings/headings.component";
 
 
 
@@ -34,7 +35,10 @@ import { HomeComponent } from './home.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    HeadingsComponent
   ]
 })
-export class HomeModule { }
+export class HomeModule {
+
+}
