@@ -2,6 +2,75 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+
+    .dots-con {
+        // display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        // width: 30px;
+        position: absolute;
+        z-index: 660;
+        bottom: 10px;
+        left: calc(50% - 15px);
+        // background-color: #020025;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #02002536;
+        }
+
+    }
+
+    .svg {
+        position: absolute;
+        // border: 1px solid black;
+        border-radius: 50%;
+        top: calc(50% - 22.5px) 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // box-shadow: 4px 4px 15px 4px rgba(134, 134, 134, 0.2);
+        background-color: #fff;
+        width: 45px;
+        height: 45px;
+        transform: translateY(-50%);
+        z-index: 660;
+        //   border-radius: 50%;
+        transition: all .3s linear;
+        visibility: hidden;
+        opacity: 0;
+        box-shadow: 0 15px 35px #0000001a;
+        text-shadow: 2px 3px 8px rgba(0, 0, 0, .1);
+
+        svg {
+            stroke: #FCD804;
+            fill: #FCD804;
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover {
+            background-color: #FCD804;
+
+            svg {
+                stroke: #fff;
+                fill: #fff;
+            }
+        }
+
+        &:first-child {
+            right: -25px;
+        }
+
+        &:last-child {
+            left: -25px;
+        }
+    }
 
     .products-card {
         width: calc(20% - 8px);
@@ -134,7 +203,13 @@
         }
     }
 
+    &:hover {
+        .svg {
 
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 
 }
 
